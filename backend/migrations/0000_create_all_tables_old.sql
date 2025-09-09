@@ -13,42 +13,14 @@ CREATE TABLE IF NOT EXISTS users (
     role TEXT NOT NULL,
     is_provider BOOLEAN NOT NULL DEFAULT FALSE,
     tokens_balance BIGINT NOT NULL DEFAULT 0,
-    gps VARCHAR(255),
-    gps_consent BOOLEAN DEFAULT TRUE,
-    nom VARCHAR(255),
-    prenom VARCHAR(255),
-    nom_complet VARCHAR(255),
-    photo_profil VARCHAR(500),
-    avatar_url VARCHAR(500)
-    gps_consent BOOLEAN DEFAULT TRUE,
-    nom VARCHAR(255),
-    prenom VARCHAR(255),
-    nom_complet VARCHAR(255),
-    photo_profil VARCHAR(500),
-    avatar_url VARCHAR(500)
-    gps_consent BOOLEAN DEFAULT TRUE,
-    nom VARCHAR(255),
-    prenom VARCHAR(255),
-    nom_complet VARCHAR(255),
-    photo_profil VARCHAR(500),
-    avatar_url VARCHAR(500)
+    token_price_user DOUBLE PRECISION NOT NULL,
     token_price_provider DOUBLE PRECISION NOT NULL,
     commission_pct REAL NOT NULL,
     preferred_lang TEXT NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
     updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
     gps VARCHAR(255),
-    gps_consent BOOLEAN DEFAULT TRUE,
-    nom VARCHAR(255),
-    prenom VARCHAR(255),
-    nom_complet VARCHAR(255),
-    photo_profil VARCHAR(500),
-    avatar_url VARCHAR(500),
-    nom VARCHAR(255),
-    prenom VARCHAR(255),
-    nom_complet VARCHAR(255),
-    photo_profil VARCHAR(500),
-    avatar_url VARCHAR(500)
+    gps_consent BOOLEAN DEFAULT TRUE
 );
 ALTER TABLE users ALTER COLUMN gps_consent SET DEFAULT TRUE;
 
